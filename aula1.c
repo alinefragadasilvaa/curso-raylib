@@ -21,7 +21,7 @@
 *
 ********************************************************************************************/
 
-#include "raylib.h"
+#include "raylib.h" // incluindo a biblioteca
 
 //------------------------------------------------------------------------------------
 // Program main entry point
@@ -33,17 +33,17 @@ int main(void)
     const int screenWidth = 800;
     const int screenHeight = 450;
 
-    // minhas vari�veis
+    // minhas variáveis
     int i;
-    char C[4][50] = {"oi", "tchau", "a", "gremio?"};
+    char C[4][50] = {"oi", "tchau", "a", "gremio"}; // strings para desenhar na janela
 
-    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+    InitWindow(screenWidth, screenHeight, "Aula 1"); // inicializando a janela
 
-    SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
+    SetTargetFPS(60);               // quantidade de vezes que a janela inicializa por segundo (a janela é um while)
     //--------------------------------------------------------------------------------------
 
     // Main game loop
-    while (!WindowShouldClose())    // Detect window close button or ESC key
+    while (!WindowShouldClose())    // Detect window close button or ESC key 
     {
         // Update
         //----------------------------------------------------------------------------------
@@ -55,13 +55,12 @@ int main(void)
 
         BeginDrawing();
 
-            ClearBackground(BLACK);
+            ClearBackground(BLACK); // cor do fundo
 
+            // desenhando cada string em uma coordenada diferente
             for(i=0;i<4;i++){
-                DrawText(C[i], (screenWidth-MeasureText(C[i],30))/2,100+(30+50)*i, 30, RED);
+                DrawText(C[i], (screenWidth-MeasureText(C[i],30))/2,100+(30+50)*i, 30, RED); // MeasureText() devolve a largura da string
             }
-
-
 
         EndDrawing();
 
