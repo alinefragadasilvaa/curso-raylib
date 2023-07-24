@@ -54,22 +54,19 @@ int main(void)
         // Draw
         //----------------------------------------------------------------------------------
 
+        // a ideia é fazer a string "DVD" percorrer pela janela sem ultrapassar os limites da mesma
+        
         BeginDrawing();
 
-            i+=2;
-
+            i+=2; // string percorrendo a janela linearmente incrementando a coordenada i
 
             ClearBackground(BLACK);
 
-            if(i<screenWidth-MeasureText(C,100)){
-                DrawText(C, i, j, 100, GREEN);
+            if(i<screenWidth-MeasureText(C,100)){ // desenha se a coordenada i da string for menor que a largura da janela menos a largura da string
+                DrawText(C, i, j, 100, GREEN); 
             } else {
-                i=0;
+                i=0; // se a coordenada i atinge o limite i volta a ser 0
             }
-
-
-
-
 
         EndDrawing();
 
