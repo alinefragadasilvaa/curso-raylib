@@ -15,6 +15,7 @@ https://www.raylib.com/cheatsheet/cheatsheet.html
 -- Funções importantes:
 * MeasureText(string, tamanho_fonte) // devolve a largura da string, usada para centralizar o texto na janela
 * DrawText(string, posicao_horizontal, posicao_vertical, tamanho_fonte) // escreve um texto na janela
+* sprintf(variavel_destino, "teste %d" , variavel_origem) //cola uma variável em uma string
 
 ## Aula 2
 
