@@ -12,8 +12,8 @@ https://www.raylib.com/cheatsheet/cheatsheet.html
 * A janela está em um while, 60 vezes por segundo
 
 - Funções importantes:
-MeasureText(string, tamanho_fonte) // devolve a largura da string, usada para centralizar o texto na janela
-DrawText(string, posicao_horizontal, posicao_vertical, tamanho_fonte) // escreve um texto na janela
+* MeasureText(string, tamanho_fonte) // devolve a largura da string, usada para centralizar o texto na janela
+* DrawText(string, posicao_horizontal, posicao_vertical, tamanho_fonte) // escreve um texto na janela
 
 ## Aula 2
 
