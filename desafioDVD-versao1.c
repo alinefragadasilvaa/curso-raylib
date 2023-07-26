@@ -1,4 +1,4 @@
-/*******************************************************************************************
+ /*******************************************************************************************
 *
 *   raylib [core] example - Basic window
 *
@@ -62,11 +62,13 @@ int main(void)
 
             ClearBackground(BLACK);
 
-            if(i<screenWidth-MeasureText(C,100)){ // desenha se a coordenada i da string for menor que a largura da janela menos a largura da string
-                DrawText(C, i, j, 100, GREEN); 
-            } else if(i>screenWidth-MeasureText(C,100)) {
+            
+        
+            if(i>screenWidth-MeasureText(C,100) || i<0){
                dx*=-1;
-            } 
+            } else{
+                DrawText(C, inicio, j, 100, GREEN); 
+            }
 
         EndDrawing();
 
