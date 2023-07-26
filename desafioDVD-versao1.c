@@ -34,8 +34,8 @@ int main(void)
     const int screenHeight = 450;
 
     // minhas variáveis
-    int i=0, j=30;
-    int flag=0;
+    int inicio=0, j=30;
+    int dx=2;
     char C[4] = {"DVD"};
 
     InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
@@ -58,15 +58,15 @@ int main(void)
         
         BeginDrawing();
 
-            i+=2; // string percorrendo a janela linearmente incrementando a coordenada i
+            inicio+=dx; // string percorrendo a janela linearmente incrementando a coordenada i
 
             ClearBackground(BLACK);
 
             if(i<screenWidth-MeasureText(C,100)){ // desenha se a coordenada i da string for menor que a largura da janela menos a largura da string
                 DrawText(C, i, j, 100, GREEN); 
-            } else {
-                i=0; // se a coordenada i atinge o limite i volta a ser 0
-            }
+            } else if(i>screenWidth-MeasureText(C,100)) {
+               dx*=-1;
+            } 
 
         EndDrawing();
 
