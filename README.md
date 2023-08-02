@@ -6,18 +6,32 @@ https://ufrgscpd-my.sharepoint.com/:b:/g/personal/00579723_ufrgs_br/EXKSflE3FitP
 ## Aula 1
 O arquivo referente a essa aula é **aula1.c**
 
--- Especificação completa:
+-- Especificação completa da biblioteca:
 https://www.raylib.com/cheatsheet/cheatsheet.html
 
 -- Comentários:
-* A janela está em um while, 60 vezes por segundo
+* O funcionamento da janela consiste em um while que exibe x frames por segundo
+* Com isso é possível fazer alterações em variáveis a cada iteração, "movimentando" elementos na janela
 
 -- Funções importantes:
-* MeasureText(string, tamanho_fonte) // devolve a largura da string, usada para centralizar o texto na janela
-* DrawText(string, posicao_horizontal, posicao_vertical, tamanho_fonte) // escreve um texto na janela
-* sprintf(variavel_destino, "teste %d" , variavel_origem) //cola uma variável em uma string
+* MeasureText(string, tamanho_fonte) // devolve a largura da string, pode ser usada para centralizar o texto na janela
+* DrawText(string, posicao_horizontal, posicao_vertical, tamanho_fonte) // desneha um texto na janela
+* sprintf(variavel_destino, "teste %d" , variavel_origem) // atribui uma variável em uma string
 
 ## Aula 2
+
+-- Funções importantes:
+* IsMouseButtonPressed(constante_botao) // devolve true se o mouse for pressionado uma vez
+* IsMouseButtonDown(constante_botao) // devolve true enquanto o mouse estiver pressionado
+* IsMouseButtonReleased(constante_botao)
+* IsMouseButtonUp(constante_botao)
+* GetMouseX() // devolve cordenada x do mouse
+* GetMouseY() // devolve cordenada y do mouse
+
+-- Constantes importantes: 
+* MOUSE_BUTTON_LEFT // botões do mouse
+* MOUSE_BUTTON_RIGHT
+* MOUSE_BUTTON_MIDDLE
 
 ## Aula 3
 
