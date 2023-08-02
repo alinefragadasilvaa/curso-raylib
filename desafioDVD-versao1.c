@@ -27,10 +27,10 @@ int main(void)
         ClearBackground(BLACK);
             
         // muda direção x da string
-        if(x>screenWidth-MeasureText(C,100) || x<0){ // quando a cordenada x for maior que largura da tela - a largura da string ou quando for menor que 0 (inicio da janela)
+        if(x>screenWidth-MeasureText(S,100) || x<0){ // quando a cordenada x for maior que largura da tela - a largura da string ou quando for menor que 0 (inicio da janela)
            dx*=-1;
         } else{ // senão segue desenhando a string com a cordenada x sendo icrementada
-            DrawText(C, x, y, 100, GREEN); 
+            DrawText(S, x, y, 100, GREEN); 
         }
 
         EndDrawing();
