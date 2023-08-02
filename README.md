@@ -35,6 +35,25 @@ https://www.raylib.com/cheatsheet/cheatsheet.html
 
 ## Aula 3
 
+-- Comentários
+* A biblioteca vem com tipos pré-definidos (structs), como vetores e cores
+
+-- Tipos Pré-definidos:
+* Vector2 // possui cordenada x e y
+  * Ex: struct Vector2 meu_vetor = {x,y};
+* Rectangle // possui cordenadas x e y largura e altura
+  * Ex: Rectangle meu_retangulo = {x, y, width, height};
+* Color // possui intensidade das cores primárias
+  * r -> red
+  * g -> green
+  * b -> blue
+  * a -> transparência
+  * Ex: Color minha_cor = {r, g, b, a};
+
+-- Funções importantes:
+* CheckCollisionPointRec(vetor, retangulo) // devolve true se tiver colisão entre um vetor tipo 2 e um retângulo que são tipos pré-definidos pela biblioteca
+* DrawRectangleRec(retângulo, cor) // desenha um retângulo recebendo como parâmetro variáveis dos tipos pré-definidos retângulo e cor
+
 ## Aula 4
 
 ## Aula 5
