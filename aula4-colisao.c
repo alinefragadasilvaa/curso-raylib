@@ -29,36 +29,34 @@ int main(void)
     {
         // ÁREA DE PROGRAMAÇÃO
 
-        rec_preto = (Rectangle){x:x, y:y, width:50, height:50};
-        rec_vermelho = (Rectangle){x:100, y:100, width:50, height:50};
 
         if(IsKeyDown(KEY_UP)){
-                y-=2;
-                if(CheckCollisionRecs(rec_preto,rec_vermelho))
-                    y+=2;
-        }
-
-        if(IsKeyDown(KEY_DOWN)){
-            y+=2;
-        } if(IsKeyDown(KEY_LEFT)){
-            x-=2;
-        } if(IsKeyDown(KEY_RIGHT)){
-            x+=2;
-        }
-        if(CheckCollisionRecs(rec_preto,rec_vermelho)){
-           /* if(IsKeyDown(KEY_UP)){
-                y+=2;
-            }*/ if(IsKeyDown(KEY_DOWN)){
-                y-=2;
-            } else if(IsKeyDown(KEY_LEFT)){
-                x+=2;
-            } else if(IsKeyDown(KEY_RIGHT)){
-                x-=2;
+            y-=2;
+            if(CheckCollisionRecs(rec_preto,rec_vermelho)){
+               y+=10;
             }
-
+        }
+        else if(IsKeyDown(KEY_DOWN)){
+            y+=2;
+            if(CheckCollisionRecs(rec_preto,rec_vermelho)){
+                y-=10;
+            }
+        }
+        else if(IsKeyDown(KEY_LEFT)){
+            x-=2;
+            if(CheckCollisionRecs(rec_preto,rec_vermelho)){
+                x+=10;
+            }
+        }
+        else if(IsKeyDown(KEY_RIGHT)){
+            x+=2;
+            if(CheckCollisionRecs(rec_preto,rec_vermelho)){
+                x-=10;
+            }
         }
 
-
+        rec_preto = (Rectangle){x:x, y:y, width:50, height:50};
+        rec_vermelho = (Rectangle){x:100, y:100, width:50, height:50};
 
 
         // ÁREA DE DESENHO
